@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<?php
+// Ejercicio ECHO con vairable con mi nombre
+	$nombre = "Joam Ferreiro Tobio";
+	echo "Hola mundo, pagina por $nombre";
+?>
+
+</body>
+</html>
