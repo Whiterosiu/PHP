@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<?php
+	// Ejercicio 2 PHP
+	$numero1 = 5;
+	$numero2 = 2;
+	$resultado = $numero1 + $numero2;
+	echo $resultado;
+	// Entendí que se pedía la suma de ambas variables
+?>
+
+</body>
+</html>
