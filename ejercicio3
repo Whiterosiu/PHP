@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<?php
+	// Ejercicio 3 PHP
+	for($i=1; $i<=10; $i++){
+			echo $i;
+			echo "<br>";
+	}
+?>
+
+</body>
+</html>
