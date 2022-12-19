@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<?php
+	// Ejercicio 5 PHP
+		$num = 12;
+		if (($num % 2) == 0) {
+		echo "Soy un numero par";
+		}
+        else {
+		echo "Soy un numero impar";
+	}
+?>
+
+</body>
+</html>
