@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<body>
+<?php
+//Arrays
+
+$motos = array("Yamaha", "Kawasaki", "Honda", "Suzuki");
+$coches = array("Ferrari", "Tesla", "Citroen", "Audi");
+
+// Apartado A
+
+foreach ($motos as $moto) {
+    echo $moto . "<br>";
+}
+
+// Apartado B
+
+sort($motos);
+foreach ($motos as $moto) {
+    echo $moto . "<br>";
+}
+
+// Apartado C
+
+function mostrarResultadosOrdenados($array) {
+    sort($array);
+    foreach ($array as $elemento) {
+        echo $elemento . "<br>";
+    }
+  }
+mostrarResultadosOrdenados($motos);
+
+// Apartado D
+echo "Cantidad de elementos en el array de motos: " . count($motos) . "<br>";
+echo "Cantidad de elementos en el array de coches: " . count($coches) . "<br>";
+
+
+// Apartado E
+
+$buscar = "Honda";
+if (in_array($buscar, $coches)) {
+    echo "El elemento " . $buscar . " se encuentra en el array de coches.<br>";
+} else {
+    echo "El elemento " . $buscar . " no se encuentra en el array de coches.<br>";
+}
+$buscar = "Honda";
+if (in_array($buscar, $motos)) {
+    echo "El elemento " . $buscar . " se encuentra en el array de motos.<br>";
+} else {
+    echo "El elemento " . $buscar . " no se encuentra en el array de motos.<br>";
+}
+?>
+</body>
+</html>
