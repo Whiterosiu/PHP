@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<body>
+<?php
+$nota = 8;
+
+switch ($nota) {
+    case $nota >= 5 && $nota <= 6:
+        echo "Aprobado";
+        break;
+    case $nota >= 7 && $nota <= 8:
+        echo "Notable";
+        break;
+    case $nota >= 9 && $nota <= 10:
+        echo "Sobresaliente";
+        break;
+    default:
+        echo "Calificación no válida";
+        break;
+}
+?>
+</body>
+</html>
