@@ -1,0 +1,47 @@
+<?php
+// Conexión a la base de datos
+$host = "hostname";
+$user = "username";
+$password = "password";
+$dbname = "database_name";
+
+$conn = mysqli_connect($host, $user, $password, $dbname);
+
+// Crear tabla
+$sql = "CREATE TABLE ejemplo (id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY, nombre VARCHAR(30) NOT NULL, valor INT(6) NOT NULL)";
+mysqli_query($conn, $sql);
+
+// Insertar valor
+$nombre = "Ejemplo";
+$valor = "10";
+$sql = "INSERT INTO ejemplo (nombre, valor) VALUES ('$nombre', '$valor')";
+mysqli_query($conn, $sql);
+
+// Actualizar valor
+$nombre = "Ejemplo";
+$valor = "20";
+$sql = "UPDATE ejemplo SET valor='$valor' WHERE nombre='$nombre'";
+mysqli_query($conn, $sql);
+
+// Mostrar valores
+$sql = "SELECT * FROM ejemplo";
+$result = mysqli_query($conn, $sql);
+
+if (mysqli_num_rows($result) > 0) {
+    // output data of each row
+    while($row = mysqli_fetch_assoc($result)) {
+        echo "id: " . $row["id"]. " - Nombre: " . $row["nombre"]. " - Valor: " . $row["valor"]. "<br>";
+    }
+} else {
+    echo "0 results";
+}
+
+// Eliminar valor
+$nombre = "Ejemplo";
+$sql = "DELETE FROM ejemplo WHERE nombre='$nombre'";
+mysqli_query($conn, $sql);
+
+mysqli_close($conn);
+?>
+
+En teoría todo funciona pero me da un erro ao executalo, supoño e quero pensar que é cousa da base de datos e non do php
